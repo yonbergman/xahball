@@ -53,8 +53,8 @@ class GameScene: SKScene {
   }
   
   override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-    
-    if touches.count == 2 {
+//    touches.count == 1 && already moving
+    if event.touchesForView(view!)!.count == 2 {
       let distance = hypot(ball.position.x - player1.position.x, ball.position.y - player1.position.y)
       if distance <= 32 {
         ball.physicsBody?.applyImpulse(CGVector(dx: ball.frame.midX - player1.frame.midX, dy: ball.frame.midY - player1.frame.midY))
