@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B00DB9D41B69211C00529A74 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00DB9D31B69211C00529A74 /* PlayerNode.swift */; };
+		B00DB9D61B6921B400529A74 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00DB9D51B6921B400529A74 /* Colors.swift */; };
+		B00DB9D81B6921FF00529A74 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00DB9D71B6921FF00529A74 /* Team.swift */; };
+		B00DB9DA1B6924CC00529A74 /* BallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00DB9D91B6924CC00529A74 /* BallNode.swift */; };
+		B00DB9DC1B69257300529A74 /* FieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00DB9DB1B69257300529A74 /* FieldNode.swift */; };
 		B068F2C51B5FE101005CABFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068F2C41B5FE101005CABFE /* AppDelegate.swift */; };
 		B068F2C71B5FE101005CABFE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B068F2C61B5FE101005CABFE /* GameScene.sks */; };
 		B068F2C91B5FE101005CABFE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068F2C81B5FE101005CABFE /* GameScene.swift */; };
@@ -28,6 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B00DB9D31B69211C00529A74 /* PlayerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
+		B00DB9D51B6921B400529A74 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B00DB9D71B6921FF00529A74 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		B00DB9D91B6924CC00529A74 /* BallNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallNode.swift; sourceTree = "<group>"; };
+		B00DB9DB1B69257300529A74 /* FieldNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldNode.swift; sourceTree = "<group>"; };
 		B068F2BF1B5FE101005CABFE /* xahball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xahball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B068F2C31B5FE101005CABFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B068F2C41B5FE101005CABFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +99,11 @@
 				B068F2CF1B5FE101005CABFE /* Images.xcassets */,
 				B068F2D11B5FE101005CABFE /* LaunchScreen.xib */,
 				B068F2C21B5FE101005CABFE /* Supporting Files */,
+				B00DB9D31B69211C00529A74 /* PlayerNode.swift */,
+				B00DB9D51B6921B400529A74 /* Colors.swift */,
+				B00DB9D71B6921FF00529A74 /* Team.swift */,
+				B00DB9D91B6924CC00529A74 /* BallNode.swift */,
+				B00DB9DB1B69257300529A74 /* FieldNode.swift */,
 			);
 			path = xahball;
 			sourceTree = "<group>";
@@ -219,9 +234,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00DB9D81B6921FF00529A74 /* Team.swift in Sources */,
 				B068F2C91B5FE101005CABFE /* GameScene.swift in Sources */,
+				B00DB9D61B6921B400529A74 /* Colors.swift in Sources */,
 				B068F2CB1B5FE101005CABFE /* GameViewController.swift in Sources */,
+				B00DB9DC1B69257300529A74 /* FieldNode.swift in Sources */,
+				B00DB9D41B69211C00529A74 /* PlayerNode.swift in Sources */,
 				B068F2C51B5FE101005CABFE /* AppDelegate.swift in Sources */,
+				B00DB9DA1B6924CC00529A74 /* BallNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +439,7 @@
 				B068F2E41B5FE101005CABFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B068F2E51B5FE101005CABFE /* Build configuration list for PBXNativeTarget "xahballTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +448,7 @@
 				B068F2E71B5FE101005CABFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
