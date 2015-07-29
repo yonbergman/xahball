@@ -21,7 +21,7 @@ class BallNode: SKShapeNode {
     physicsBody = SKPhysicsBody(circleOfRadius: BallNode.circleSize + BallNode.strokeWidth)
     physicsBody?.allowsRotation = false
     physicsBody?.mass = 0.1
-    physicsBody?.restitution = 1
+    physicsBody?.restitution = 0.5
     physicsBody?.linearDamping = 0.1
     physicsBody?.angularDamping = 0.1
   }
