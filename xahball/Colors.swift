@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 yonbergman. All rights reserved.
 //
 
-import Foundation
 import SpriteKit
 
-let redTeamColor = UIColor(red: 0.898, green: 0.431, blue: 0.337, alpha: 1)
-let blueTeamColor = UIColor(red: 0.337, green: 0.537, blue: 0.898, alpha: 1)
+let redTeamColor = SKColor(red: 0.898, green: 0.431, blue: 0.337, alpha: 1)
+let blueTeamColor = SKColor(red: 0.337, green: 0.537, blue: 0.898, alpha: 1)
 
-let fieldColor = UIColor(red: 0.416, green: 0.565, blue: 0.349, alpha: 1)
-let fieldLineColor = UIColor(red: 0.78, green: 0.902, blue: 0.741, alpha: 1)
+let fieldColor = SKColor(red: 0.416, green: 0.565, blue: 0.349, alpha: 1)
+let fieldLineColor = SKColor(red: 0.78, green: 0.902, blue: 0.741, alpha: 1)
 
-let goalPostColor = UIColor(red: 0.867, green: 0.867, blue: 1, alpha: 1)
+let redGoalColor = SKColor(red: 1, green: 0.867, blue: 0.867, alpha: 1)
+let blueGoalColor = SKColor(red: 0.867, green: 0.867, blue: 1, alpha: 1)

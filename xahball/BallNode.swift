@@ -22,8 +22,8 @@ class BallNode: SKShapeNode {
     physicsBody?.allowsRotation = false
     physicsBody?.mass = 0.1
     physicsBody?.restitution = 0.5
-    physicsBody?.linearDamping = 0.1
-    physicsBody?.angularDamping = 0.1
+    physicsBody?.linearDamping = 0
+    physicsBody?.angularDamping = 0
   }
   
   required init?(coder aDecoder: NSCoder) {

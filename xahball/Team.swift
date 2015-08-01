@@ -7,19 +7,33 @@
 //
 
 import Foundation
+import SpriteKit
 
 class Player {
-  var name: String?
+  var name: String
   let team: Team
+  let activePlayer: Bool
+  var avatar: String
   
-  init(team: Team, name: String?) {
+  init(team: Team, name: String?, activePlayer: Bool = false) {
     self.team = team
-    self.name = name
+    self.name = name ?? "Bot"
+    self.avatar = (random() % 100).description
+    self.activePlayer = activePlayer
   }
+  
 }
 
-enum TeamType {
-  case Blue, Red
+enum TeamType: String {
+  case Blue = "Blue", Red = "Red"
+  
+  var name: String {
+    return rawValue
+  }
+  
+  var color: SKColor {
+    return self == .Blue ? blueTeamColor : redTeamColor
+  }
 }
 
 class Team {

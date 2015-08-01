@@ -103,8 +103,8 @@ class FieldNode {
         controlPoint: CGPoint(x: marginX - goalWidth, y: marginY + goalYDiff))
 
       
-      children.append(createGoalPost(pointA))
-      children.append(createGoalPost(pointB))
+      children.append(createGoalPost(pointA, isLeft: isLeft))
+      children.append(createGoalPost(pointB, isLeft: isLeft))
     
     } else {
       let pointA = CGPoint(x: frame.maxX - marginX, y: marginY + goalYDiff)
@@ -119,8 +119,8 @@ class FieldNode {
       path.addQuadCurveToPoint(pointB,
         controlPoint: CGPoint(x: frame.maxX - marginX + goalWidth, y: frame.maxY - marginY - goalYDiff))
       
-      children.append(createGoalPost(pointA))
-      children.append(createGoalPost(pointB))
+      children.append(createGoalPost(pointA, isLeft: isLeft))
+      children.append(createGoalPost(pointB, isLeft: isLeft))
 
     }
     
@@ -133,9 +133,9 @@ class FieldNode {
     return node
   }
   
-  class func createGoalPost(point: CGPoint) -> SKShapeNode {
+  class func createGoalPost(point: CGPoint, isLeft: Bool) -> SKShapeNode {
     let goalPost = SKShapeNode(circleOfRadius: goalPostSize)
-    goalPost.fillColor = goalPostColor
+    goalPost.fillColor = isLeft ? redGoalColor : blueGoalColor
     goalPost.lineWidth = 2
     goalPost.strokeColor = UIColor.blackColor()
     goalPost.physicsBody = SKPhysicsBody(circleOfRadius: goalPostSize + 2)
