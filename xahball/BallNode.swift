@@ -24,6 +24,8 @@ class BallNode: SKShapeNode {
     physicsBody?.restitution = 0.5
     physicsBody?.linearDamping = 0
     physicsBody?.angularDamping = 0
+    physicsBody?.categoryBitMask = ballCollision
+    physicsBody?.collisionBitMask = allCollision | ballBoundsCollision
   }
   
   required init?(coder aDecoder: NSCoder) {

@@ -22,8 +22,13 @@ class GameScene: SKScene {
   
   var justScored = false
   
+  var game = Game()
+  
   func createScene() {
+//    physicsWorld.
     physicsWorld.gravity = CGVectorMake(0, 0)
+    self.physicsBody = SKPhysicsBody(edgeLoopFromRect: frame)
+//    self.physicsBody
     
     addChild(FieldNode.createField(self.frame))
 
@@ -31,7 +36,8 @@ class GameScene: SKScene {
     ball.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
     addChild(ball)
     
-    let player = Player(team: Team(type: .Red), name: "Yonatan", activePlayer: true)
+
+    let player = Player(team: game.redTeam, name: "Yonatan", activePlayer: true)
     player.avatar = "YB"
     player1 = PlayerNode(player: player)
     player1.position = CGPoint(x: self.frame.minX + 100, y: self.frame.midY)
@@ -39,7 +45,7 @@ class GameScene: SKScene {
     activePlayer = player1
 
     
-    player2 = PlayerNode(player: Player(team: Team(type: .Blue), name: nil))
+    player2 = PlayerNode(player: Player(team: game.blueTeam, name: nil))
     player2.position = CGPoint(x: self.frame.maxX - 100, y: self.frame.midY + 100)
     addChild(player2)
     
@@ -91,8 +97,9 @@ class GameScene: SKScene {
     })
     let actions = SKAction.sequence([wait, do2])
     self.runAction(actions)
+    let messageString = game.score(team).message(team)
 
-    message.showMessage("\(team.name) Scored!", color: team.color)
+    message.showMessage(messageString, color: team.color)
   }
   
   private func reset() {

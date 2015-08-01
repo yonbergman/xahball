@@ -20,6 +20,7 @@ class Player {
     self.name = name ?? "Bot"
     self.avatar = (random() % 100).description
     self.activePlayer = activePlayer
+    team.players.append(self)
   }
   
 }
@@ -38,15 +39,43 @@ enum TeamType: String {
 
 class Team {
   
-  let players: [Player] = []
+  var players: [Player] = []
   let type: TeamType
+  var score = 0
   
   init(type: TeamType) {
     self.type = type
   }
+  
+  func scored() -> Int {
+    score += 1
+    return score
+  }
 }
 
+enum GoalType {
+  case MidGame, Winning
+  
+  func message(teamType: TeamType) -> String {
+    switch self {
+      case .MidGame: return "\(teamType.name) Scored!"
+      case .Winning: return "\(teamType.name) Won!"
+    }
+  }
+}
 class Game {
-  let teamOne = Team(type: .Blue)
-  let teamTwo = Team(type: .Red)
+  
+  let targetTime = NSTimeInterval(5 * 60)
+  let targetScore = 5
+  let redTeam = Team(type: .Red)
+  let blueTeam = Team(type: .Blue)
+  
+  func score(teamType: TeamType) -> GoalType{
+    let team = teamType == .Blue ? blueTeam : redTeam
+    if team.scored() >= targetScore {
+      return .Winning
+    } else {
+      return .MidGame
+    }
+  }
 }

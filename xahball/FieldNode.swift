@@ -59,6 +59,8 @@ class FieldNode {
     field.lineWidth = fieldLineWidth
     field.physicsBody = SKPhysicsBody(edgeChainFromPath: path.CGPath)
     field.physicsBody?.friction = 0
+    field.physicsBody?.categoryBitMask = ballBoundsCollision
+    field.physicsBody?.collisionBitMask = ballCollision | ballBoundsCollision
     field.fillColor = fieldColor
     
     
@@ -127,6 +129,8 @@ class FieldNode {
     let node = SKShapeNode(path: path.CGPath)
     node.strokeColor = UIColor.blackColor()
     node.lineWidth = 2
+    node.physicsBody = SKPhysicsBody(edgeChainFromPath: path.CGPath)
+    node.physicsBody?.dynamic = false
     for subNode in children {
       node.addChild(subNode)
     }

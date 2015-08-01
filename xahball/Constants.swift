@@ -16,3 +16,13 @@ let fieldLineColor = SKColor(red: 0.78, green: 0.902, blue: 0.741, alpha: 1)
 
 let redGoalColor = SKColor(red: 1, green: 0.867, blue: 0.867, alpha: 1)
 let blueGoalColor = SKColor(red: 0.867, green: 0.867, blue: 1, alpha: 1)
+
+
+
+let playerCollision: UInt32 = 1
+let ballBoundsCollision: UInt32 = 2
+let ballCollision: UInt32 = 4
+let goalCollision: UInt32 = 8
+
+let allCollision = playerCollision | ballCollision | goalCollision
+//let allCollision = 1 << 1

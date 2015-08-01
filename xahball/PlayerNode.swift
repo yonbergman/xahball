@@ -29,6 +29,8 @@ class PlayerNode: SKShapeNode {
     physicsBody?.allowsRotation = false
     physicsBody?.mass = 1
     physicsBody?.restitution = 0.4
+    physicsBody?.categoryBitMask = playerCollision
+    physicsBody?.collisionBitMask = allCollision
     
     fillColor = player.team.type.color
     
